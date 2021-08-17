@@ -22,6 +22,11 @@ function updateTotalBalance(field, fieldInput) {
     document.getElementById('total-balance').innerText = totalBalance;
 }
 
+function getTotalBalance() {
+    const totalBalance = Number(document.getElementById('total-balance').innerText);
+    return totalBalance;
+}
+
 
 document.getElementById('deposit-btn').addEventListener('click', function () {
     // get deposit input
@@ -38,13 +43,12 @@ document.getElementById('deposit-btn').addEventListener('click', function () {
 document.getElementById('withdraw-btn').addEventListener('click', function () {
     // get withdraw input
     const withdrawInput = getInputValue('withdraw-input');
-    if (withdrawInput > 0) {
-        const totalBalance = Number(document.getElementById('total-balance').innerText);
+    const totalBalance = getTotalBalance();
+    if (withdrawInput > 0 && withdrawInput <= totalBalance) {
         if (totalBalance > 0) {
             // update total withdraw
             updateTotalField('total-withdraw', withdrawInput);
-        }
-
+        };
         // update total balance
         updateTotalBalance('withdraw', withdrawInput);
     }
