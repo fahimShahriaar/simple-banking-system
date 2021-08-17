@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placenta Bank</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 class="text-4xl text-center mt-20">Welcome to <span class="text-green-500">Placenta Bank!</span></h1>
+        <hr class="w-40 mt-3 border-t-0 border-b-2 border-green-500 mx-auto">
+    </header>
+    <main class="w-2/4 mx-auto mt-16">
+        <!-- form section -->
+        <section>
+            <div class="">
+                <input type="text" id="email"
+                    class="border-b border-green-500 focus:outline-none block p-2 w-full md:w-2/4 md:mx-auto"
+                    placeholder="your email">
+                <input type="password" id="password"
+                    class="border-b border-green-500 focus:outline-none block p-2 my-2 w-full md:w-2/4 md:mx-auto"
+                    placeholder="your password" id="">
+                <button id="login-btn"
+                    class="bg-green-500 block mx-auto mt-8 px-4 py-1 rounded text-gray-50">Login</button>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="bg-green-100 fixed bottom-0 w-full text-center p-6 text-green-600">
+        <p>mail: abc@gmail.com & pass: abc123</p>
+    </footer>
+
+    <script src="./js/login.js"></script>
+</body>
+
+</html>
